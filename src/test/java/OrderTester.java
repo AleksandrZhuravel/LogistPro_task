@@ -3,7 +3,6 @@ import io.qameta.allure.selenide.AllureSelenide;
 import lombok.val;
 import org.junit.jupiter.api.*;
 
-import static com.codeborne.selenide.Selenide.back;
 import static com.codeborne.selenide.Selenide.open;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -24,7 +23,7 @@ public class OrderTester {
     static void tearDownAll() {
         SelenideLogger.removeListener("allure");
     }
-/*
+
     @Test
     @DisplayName(value = "01. Tour0 information must be visible")
     void tour0InformationMustBeVisible() {
@@ -44,11 +43,11 @@ public class OrderTester {
     void tour0DataOnHisMapAndHisPageMustMatch() {
         val catalogPage = new CatalogPage();
         catalogPage.tour0PageInfoChecker();
-    }*/
+    }
 
     @Test
-    @DisplayName(value = "04. Order from tour0 should be put in the basket")
-    void orderFromTour0ShouldBePutInBasket() {
+    @DisplayName(value = "04. Order from tour0 should be put in the basket and deleted")
+    void orderFromTour0ShouldBePutInBasketAndDeleted() {
         val catalogPage = new CatalogPage();
         catalogPage.tour0Clicker();
         String tourNameTextStr = catalogPage.tourNameTextReturner();
@@ -59,5 +58,15 @@ public class OrderTester {
         assertEquals(tourUrlStr, catalogPage.basketTourNameHrefReturner());
         catalogPage.basketCancelChecker();
     }
+
+    @Test
+    @DisplayName(value = "05. Order from tour0 should be put in the basket and paid with user registration")
+    void orderFromTour0ShouldBePutInBasketAndPaidWithRegistration() {
+        val catalogPage = new CatalogPage();
+        catalogPage.tour0Clicker();
+        catalogPage.tourOrderChecker();
+
+    }
+
 
 }

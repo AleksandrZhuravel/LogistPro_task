@@ -1,11 +1,8 @@
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.SelenideDriver;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
-import lombok.val;
 import org.openqa.selenium.By;
 
-import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.back;
@@ -111,6 +108,7 @@ public void tour0Clicker() {
     }
 
     public void basketCancelChecker() {
+    basketBlock.scrollIntoView(true);
     basketCanselButton.click();
     basketAllertMessage.shouldBe(visible);
     }
