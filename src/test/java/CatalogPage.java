@@ -335,13 +335,14 @@ public class CatalogPage {
 
     //метод для тестирования появления сообщения в корзине
     public void basketCancelChecker() {
-        basketCanselButton.scrollIntoView(true);
+        basketCanselButton.scrollIntoView(false);
         basketCanselButton.click();
         basketAllertMessage.shouldBe(visible);
     }
 
+    //метод для удаления заказа из корзины
     public void basketExiter() {
-        basketCanselButton.scrollIntoView(true);
+        basketCanselButton.scrollIntoView(false);
         basketCanselButton.click();
     }
 
