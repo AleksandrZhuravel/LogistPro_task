@@ -1,5 +1,6 @@
 Статус проведенных тестов:
-[![Build status](https://ci.appveyor.com/api/projects/status/1hoaj1pqi7wyit1r?svg=true)](https://ci.appveyor.com/project/AleksandrZhuravel/aqa-diploma)
+[![Build status](https://ci.appveyor.com/api/projects/status/l6kj7mqpt0ea59wh?svg=true)](https://ci.appveyor.com/project/AleksandrZhuravel/logistpro-task)
+
 
 
 
